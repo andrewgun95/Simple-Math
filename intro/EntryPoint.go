@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"github.com/andrewgun95/Simple-Math/dog"
+)
+
 func main() {
 	// Unit Testing
 
@@ -69,6 +74,12 @@ func main() {
 
 	// func xyz() {} // xyz is a function .
 
+	// Summary :
+	// Godoc's minimal approach is how easy it is to use. 
+	// As a result, a lot of Go code, including all of the standard library, already follows the conventions.
+
+	// Exercise :
+	fmt.Printf("Human %v years is equal to dog %v years", 5, dog.Years(5))
 }
 
 // More Example :
