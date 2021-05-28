@@ -59,10 +59,9 @@ func main() {
 
 	// 2. Insert a documentation on a package declaration for general information - (what is the package about)
 	//	  and for details information about the package can added in doc.go
+	//	  First sentence of comment documentation will appear in godoc *package list*
 
-	// 3. First sentence of comment documentation will appear in godoc *package list*
-
-	// 4. Must adjacent to a top-level declaration
+	// 3. Must adjacent to a top-level declaration
 
 	// For Ex :
 	
