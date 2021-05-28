@@ -1,0 +1,17 @@
+mode: set
+github.com/andrewgun95/Simple-Math/mymath/math.go:5.36,8.22 3 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:11.2,11.23 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:8.22,10.3 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:15.27,17.22 2 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:22.2,22.12 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:17.22,18.14 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:18.14,20.4 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:28.27,30.22 2 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:35.2,35.12 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:30.22,31.14 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:31.14,33.4 1 1
+github.com/andrewgun95/Simple-Math/mymath/math.go:39.32,41.22 2 0
+github.com/andrewgun95/Simple-Math/mymath/math.go:44.2,44.10 1 0
+github.com/andrewgun95/Simple-Math/mymath/math.go:41.22,43.3 1 0
+github.com/andrewgun95/Simple-Math/mymath/math.go:50.25,52.2 1 0
+github.com/andrewgun95/Simple-Math/mymath/math.go:60.36,64.2 3 0
