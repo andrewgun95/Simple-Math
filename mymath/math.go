@@ -1,5 +1,10 @@
-// Package math provides a basic mathematical functions, such as : calculate average, sum, find min and max, or etc.
+// Package mymath provides a basic mathematical functions, such as : calculate average, sum, find min and max, or etc.
 package mymath
+
+import (
+	"fmt"
+	"math"
+)
 
 // Average take a numbers as arguments and calculate the average of that numbers.
 func Average(n ...float64) float64 {
@@ -24,7 +29,7 @@ func IntMax(n ...int) int {
 
 // IntMin take a numbers as arguments and find the min number of that numbers.
 //
-// BUG(who): IntMin(n) when all the numbers is equally the same will return the first of that numbers 
+// BUG(who): IntMin(n) when all the numbers is equally the same will return the first of that numbers
 func IntMin(n ...int) int {
 	min := n[0]
 	for _, v := range n {
@@ -57,8 +62,28 @@ type Vector struct {
 }
 
 // Add operate addition of a value to the vector
-func (v *Vector) Add(value Vector) {
+func (v *Vector) Add(value *Vector) {
 	v.x += value.x
 	v.y += value.y
 	v.z += value.z
+}
+
+// Equal operate comparison between a value to the vector
+func (v *Vector) Equal(value *Vector) bool {
+	return v.x == value.x && v.y == value.y && v.z == value.z
+}
+
+// Magnitude operate to get magnitude of the vector
+func (v *Vector) Magnitude() int {
+	x2 := v.x * v.x
+	y2 := v.y * v.y
+	z2 := v.z * v.z
+
+	m := math.Sqrt(float64(x2 + y2 + z2))
+	return int(m)
+}
+
+// String return vector as a string
+func (v *Vector) String() string {
+	return fmt.Sprintf("(%v,%v,%v)", v.x, v.y, v.z)
 }

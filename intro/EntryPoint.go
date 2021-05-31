@@ -28,6 +28,11 @@ func main() {
 
 	// 3. Repetitive test case can used idiomatic *table driven style*
 
+	// 4. Test By Example
+
+	// Execute Example
+	// Capture data written to standard output and then compare the output againts the example "Output:" comment
+
 	// Writing a Document
 
 	// What is it ?
@@ -47,8 +52,8 @@ func main() {
 	// It's similar to *javadoc* in Java or *docstring* in Python
 
 	// Convention :
-	// 
-	// 1. Insert a documentation to a type, variable, function, constant, or package 
+	//
+	// 1. Insert a documentation to a type, variable, function, constant, or package
 	//    by directly give a comment on it's declaration - and must begin with the identifier
 	//
 	// For Ex :
@@ -58,7 +63,7 @@ func main() {
 	//
 	// // abc is a variable .
 	// var abc int
-	// 
+	//
 	// // Package math
 	// package math
 
@@ -69,13 +74,13 @@ func main() {
 	// 3. Must adjacent to a top-level declaration
 
 	// For Ex :
-	
+
 	// Wrong !
 
 	// func xyz() {} // xyz is a function .
 
 	// Summary :
-	// Godoc's minimal approach is how easy it is to use. 
+	// Godoc's minimal approach is how easy it is to use.
 	// As a result, a lot of Go code, including all of the standard library, already follows the conventions.
 
 	// Exercise :

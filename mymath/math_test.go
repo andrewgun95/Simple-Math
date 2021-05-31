@@ -1,11 +1,11 @@
 package mymath
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
-func TestAverage(t *testing.T) {
+func TestAverage(t *testing.T) { // Attach to Function
 	// Code test in here ...
 
 	r := Average(1, 2)
@@ -21,9 +21,9 @@ type test struct {
 	want   int   // expected output of returning IntMax
 }
 
-func TestIntMax(t *testing.T) {
+func TestIntMax(t *testing.T) { // Attach to Function
 	// Code test in here ...
-	
+
 	tests := []test{
 		{[]int{2001, 2000, 100, 101}, 2001},
 		{[]int{5, 6, 3, 2}, 6},
@@ -52,7 +52,7 @@ func TestIntMax(t *testing.T) {
 // Only terminate the goroutine that calls it - defer will still run, but different between panic
 // Others goroutines still continue execution
 
-func TestIntMin(t *testing.T) {
+func TestIntMin(t *testing.T) { // Attach to Function
 	// Code test in here ...
 
 	tests := []test{
@@ -64,7 +64,7 @@ func TestIntMin(t *testing.T) {
 	for i, v := range tests {
 		testName := fmt.Sprintf("Input %v : %v", (i + 1), v.inputs)
 		// Create a subtest with name
-		t.Run(testName, func(t *testing.T){
+		t.Run(testName, func(t *testing.T) {
 			r := IntMin(v.inputs...)
 			if r != v.want {
 				t.Fatalf("Expected %v, but got %v", v.want, r)
@@ -74,4 +74,16 @@ func TestIntMin(t *testing.T) {
 
 	// will still run even when t.Fatal (caused different go-routine)
 	t.Log("Done testing!")
+}
+
+func TestVector_Add(t *testing.T) { // Attach to Type_Method
+	// Code test in here ...
+
+	v1 := &Vector{1, 2, 3}
+	v1.Add(&Vector{3, 2, 1})
+
+	r := &Vector{4, 4, 4}
+	if !v1.Equal(r) {
+		t.Errorf("Expected %v, but got %v", r, v1)
+	}
 }
