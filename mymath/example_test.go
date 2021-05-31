@@ -32,7 +32,7 @@ func ExampleAverage_4() { // Attach to Function
 }
 
 func ExampleAverage_5() { // Attach to Function
-	// Not Executed
+	// Compiled, but Not Executed
 	fmt.Println(Average(5, 6))
 }
 

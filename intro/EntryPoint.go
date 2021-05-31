@@ -20,7 +20,7 @@ func main() {
 
 	// Best Practice :
 	// 1. The same package between code and tests code
-	// 2. Start with *Test* followed by function name and received an argument of type *testing.T
+	// 2. Start with *Test* followed by package-level declaration (function, type, const, etc) and received an argument of type *testing.T
 
 	// For Ex :
 	// func Average() {}
@@ -29,9 +29,26 @@ func main() {
 	// 3. Repetitive test case can used idiomatic *table driven style*
 
 	// 4. Test By Example
+	// Snippets of Go code - displayed as package documentation and verified by running as a test
 
-	// Execute Example
-	// Capture data written to standard output and then compare the output againts the example "Output:" comment
+	// 4.a It's executable documentation ?
+	// Guarantee the information *documentation will not out of date*, caused :
+	// (i)  Compiled
+	// (ii) Tested
+
+	// 4.b Must start with *Example* and take no argument
+
+	// For Ex :
+	// In example_test.go :
+	// func Example() {}
+	// func ExampleAverage() {}
+	// func ExampleAverage_2() {}
+	// func ExampleAverage_third() {}
+	// * Multiple example by adding a suffix in the end of identifier follow by underscore
+
+	// 4.c Behind Execute Example
+	// Example can be executed as a Test and it will,
+	// capture data written to standard output and then compare the output againts the example "Output:" comment
 
 	// Writing a Document
 
