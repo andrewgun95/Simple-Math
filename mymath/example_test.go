@@ -36,6 +36,16 @@ func ExampleAverage_5() { // Attach to Function
 	fmt.Println(Average(5, 6))
 }
 
+func ExampleAverage_6() { // Attach to Function
+	// Success
+	fmt.Println("Hello,")
+	fmt.Println("Andreas")
+
+	// Unordered output:
+	// Andreas
+	// Hello,
+}
+
 func ExampleVector_Add() { // Attach to Type_Method
 	v1 := &Vector{1, 2, 3}
 	v1.Add(&Vector{3, 2, 1})
