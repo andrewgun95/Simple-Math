@@ -11,9 +11,9 @@ func ExampleAverage() { // Attach to Function
 }
 
 func ExampleAverage_2() { // Attach to Function
-	// Failed
+	// Success
 	fmt.Println(Average(2, 4))
-	// Output: 2.5
+	// Output: 3
 }
 
 func ExampleAverage_3() { // Attach to Function

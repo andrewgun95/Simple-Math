@@ -6,39 +6,41 @@ import (
 )
 
 func main() {
-	// Unit Testing
+	// A. Unit Testing
 
-	// What is it ?
-	// 1. Unit is a small of logic of unit of the program
-	// 2. Testing is a way to *ensure code quality and reliability*
+	// 1. What is it ?
+	// (i)  Unit is a small of logic of unit of the program
+	// (ii) Testing is a way to *ensure code quality and reliability*
 
-	// It's important part after writing your program !
+	// 1.b It's important part after writing your program !
 
-	// Command :
+	// 1.c Command :
 	// go test path
 	// * will look for any tests in any of the files (*_test.go) and run of them
 
-	// Best Practice :
-	// 1. The same package between code and tests code
-	// 2. Start with *Test* followed by package-level declaration (function, type, const, etc) and received an argument of type *testing.T
+	// 1.d Best Practice : The same package between code and tests code
+	
+	// 1.e Must start with *Test* followed by package-level declaration (function, type, const, etc) 
+	//	   and received an argument of type *testing.T
 
-	// For Ex :
+	// 1.f For Ex :
 	// func Average() {}
 	// func TestAverage() {}
 
-	// 3. Repetitive test case can used idiomatic *table driven style*
+	// 2. Repetitive test case can used idiomatic *table driven style*
 
-	// 4. Test By Example
+	// 3. Test By Example
 	// Snippets of Go code - displayed as package documentation and verified by running as a test
 
-	// 4.a It's executable documentation ?
+	// 3.a It's executable documentation ?
 	// Guarantee the information *documentation will not out of date*, caused :
 	// (i)  Compiled
 	// (ii) Tested
 
-	// 4.b Must start with *Example* and take no argument
+	// 3.b Must start with *Example* followed by package-level declaration (function, type, const, etc) 
+	//     and take no argument
 
-	// For Ex :
+	// 3.c For Ex :
 	// In example_test.go :
 	// func Example() {}
 	// func ExampleAverage() {}
@@ -46,18 +48,18 @@ func main() {
 	// func ExampleAverage_third() {}
 	// * Multiple example by adding a suffix in the end of identifier follow by underscore
 
-	// 4.c Behind Execute Example
+	// 3.d Behind Execute Example
 	// Example can be executed as a Test and it will,
 	// capture data written to standard output and then compare the output againts the example "Output:" comment
 
-	// Writing a Document
+	// B. Writing a Document
 
-	// What is it ?
-	// 1. Documentation is about a way to *ensure code accessible and maintainable*
+	// 1. What is it ?
+	// (i) Documentation is about a way to *ensure code accessible and maintainable*
 
-	// Ideally, should be coupled to the code itself - documentation evolve along with the code
+	// 1.a Ideally, should be coupled to the code itself - documentation evolve along with the code !
 
-	// Command :
+	// 1.b Command :
 	// go doc - standard command for read documentation
 	// godoc  - documentation tools, ex : can launch a local web server to access the doc
 
@@ -65,12 +67,12 @@ func main() {
 	// 			godoc
 	// ---------------------------
 
-	// Parse Go source code with comments and produce documentation as HTML or plain text
+	// 2. Parse Go source code with comments and produce documentation as HTML or plain text
 	// It's similar to *javadoc* in Java or *docstring* in Python
 
 	// Convention :
 	//
-	// 1. Insert a documentation to a type, variable, function, constant, or package
+	// 2.a Insert a documentation to a type, variable, function, constant, or package
 	//    by directly give a comment on it's declaration - and must begin with the identifier
 	//
 	// For Ex :
@@ -84,11 +86,11 @@ func main() {
 	// // Package math
 	// package math
 
-	// 2. Insert a documentation on a package declaration for general information - (what is the package about)
+	// 2.b Insert a documentation on a package declaration for general information - (what is the package about)
 	//	  and for details information about the package can added in doc.go
 	//	  First sentence of comment documentation will appear in godoc *package list*
 
-	// 3. Must adjacent to a top-level declaration
+	// 2.c Must adjacent to a top-level declaration
 
 	// For Ex :
 
@@ -96,12 +98,39 @@ func main() {
 
 	// func xyz() {} // xyz is a function .
 
-	// Summary :
+	// 2.d Summary :
 	// Godoc's minimal approach is how easy it is to use.
 	// As a result, a lot of Go code, including all of the standard library, already follows the conventions.
 
-	// Exercise :
+	// 2.e Exercise :
 	fmt.Printf("Human %v years is equal to dog %v years", 5, dog.Years(5))
+
+	// C. Benchmarking
+	// 1. What is it ?
+	// (i) Benchmarking is a way to *ensure code performance*
+
+	// 1.a It's important that performance tweaking should typically be done after the system is up and running !
+	// Remember : Premature optimization is the root of the evil - Donald Knuth
+
+	// 1.b Ideally conjunction with your standard unit tests - BET (Benchmarking, Example, and Test)
+
+	// 1.c Must start with *Benchmark* followed by package-level declaration (function, type, const, etc) 
+	//	   and received an argument of type *testing.B
+
+	// 1.d Syntax :
+	// go test path -bench .
+	// * . current package
+
+	// go test path -run Bench -bench .
+	// * will test only performance issues
+
+	// go test path -run filter -bench .
+	// * will test according to filter
+	// For Ex :
+	// go test path -run Average -bench .
+
+	// 1.e In real life, your program will accept a variety of distinct inputs
+	
 }
 
 // More Example :
